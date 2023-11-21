@@ -44,3 +44,44 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
   !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+
+//   Check if all numbers are divisible by 5. Cache the result in a variable.
+  const divisByFive=(n1%5+n2%5+n3%5+n4%5)==0;
+//   Check if the first number is larger than the last. Cache the result in a variable.
+const largerThanLast=n1>n4;
+// Accomplish the following arithmetic chain:
+// Subtract the first number from the second number.
+// Multiply the result by the third number.
+// // Find the remainder of dividing the result by the fourth number.
+const arithChain= (n2-n1 *n3)%n4;
+// Change the way that isOver25 calculates so that we do not need 
+//to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
+const isUnder25 = n1 < 25 || n2 <25 || n3 < 25 || n4 < 25;
+// The distance of the trip, in total, is 1,500 miles.
+// Your car’s fuel efficiency is as follows:
+// At 55 miles per hour, you get 30 miles per gallon.
+// At 60 miles per hour, you get 28 miles per gallon.
+// At 75 miles per hour, you get 23 miles per gallon.
+// You have a fuel budget of $175.
+// The average cost of fuel is $3 per gallon.
+let totalDistance=1500;
+let budget=175;
+let fiftyfive=30;
+let sixty=28;
+let seventyfive=23;
+let averagecost=3;
+// How many gallons of fuel will you need for the entire trip?
+let gallonsat55=totalDistance/(fiftyfive)
+let gallonsat60=totalDistance/(sixty)
+let gallonsat75=totalDistance/(seventyfive)
+
+let costat55=gallonsat55*averagecost;
+let costat60=gallonsat60*averagecost;
+let costat75=gallonsat75*averagecost;
+
+console.log("costat55:"+costat55);
+console.log("costat60:"+costat60);
+console.log("costat75:"+costat75);
+
+let triphours=totalDistance/55;
+console.log('hours needed'+triphours)
